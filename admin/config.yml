@@ -65,7 +65,7 @@ collections:
         max: 3
         field: { label: "Feature", name: "feature", widget: "string" }
 
-  # Statistiken
+  # Statistiken - AKTUALISIERT
   - name: "stats"
     label: "Statistiken"
     folder: "content/stats"
@@ -74,6 +74,7 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: "Titel", name: "title", widget: "string", default: "Statistiken" } # Wichtig: Titel-Feld hinzugefügt
       - label: "Statistiken"
         name: "stats"
         widget: "list"
@@ -124,7 +125,7 @@ collections:
       - { label: "E-Mail", name: "email", widget: "string" }
       - { label: "Telefon", name: "phone", widget: "string" }
 
-  # Social Media
+  # Social Media - AKTUALISIERT
   - name: "social"
     label: "Social Media"
     folder: "content/social"
@@ -133,6 +134,7 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: "Titel", name: "title", widget: "string", default: "Social Media" } # Wichtig: Titel-Feld hinzugefügt
       - label: "Social Media Links"
         name: "social_links"
         widget: "list"
@@ -150,6 +152,7 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: "Titel", name: "title", widget: "string", default: "Footer" } # Auch hier Titel hinzugefügt
       - { label: "Copyright Text", name: "copyright", widget: "string" }
       - { label: "Footer Text", name: "footer_text", widget: "text" }
 
