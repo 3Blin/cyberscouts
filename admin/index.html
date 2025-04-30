@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberScouts CMS</title>
+  
+  <!-- CSP Meta-Tag -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+  
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; font-family: sans-serif;">
+    <img src="/assets/logo.svg" alt="CyberScouts Logo" style="max-width: 150px; margin-bottom: 20px;" onerror="this.style.display='none'">
+    <h2>CyberScouts CMS lädt...</h2>
+  </div>
+  
+  <!-- Wichtig: Dieses Element wird vom CMS benötigt -->
+  <div id="nc-root"></div>
+  
+  <!-- Netlify CMS Script -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>

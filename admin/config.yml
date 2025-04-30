@@ -1,0 +1,182 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Medien-Uploads
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# CMS Interface anpassen
+site_url: https://cyberscouts.netlify.app
+display_url: https://cyberscouts.netlify.app
+logo_url: /assets/logo.svg
+
+# Inhaltskollektionen
+collections:
+  # Hero-Sektion
+  - name: "hero"
+    label: "Hero Bereich"
+    folder: "content/hero"
+    create: false
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Untertitel", name: "subtitle", widget: "string" }
+      - { label: "CTA-Text", name: "cta_text", widget: "string" }
+      - { label: "CTA-Link", name: "cta_link", widget: "string", default: "#contact" }
+      - { label: "Sekundärer Button Text", name: "secondary_button_text", widget: "string" }
+      - { label: "Sekundärer Button Link", name: "secondary_button_link", widget: "string", default: "#modules" }
+      - { label: "Hero-Bild", name: "hero_image", widget: "image" }
+
+  # Über uns Sektion
+  - name: "about"
+    label: "Über uns Bereich"
+    folder: "content/about"
+    create: false
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Beschreibung", name: "description", widget: "markdown" }
+      - { label: "Features", name: "features", widget: "list" }
+      - { label: "Über uns Bild", name: "about_image", widget: "image" }
+      - { label: "Jahr der Gründung", name: "founding_year", widget: "number", value_type: "int", min: 2000, max: 2025 }
+
+  # Module
+  - name: "modules"
+    label: "Module"
+    folder: "content/modules"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "string", hint: "Emoji oder Unicode-Icon" }
+      - { label: "Kurzbeschreibung", name: "short_description", widget: "string" }
+      - { label: "Reihenfolge", name: "order", widget: "number", value_type: "int", min: 1 }
+      - { label: "Details", name: "body", widget: "markdown" }
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        max: 3
+        field: { label: "Feature", name: "feature", widget: "string" }
+
+  # Statistiken
+  - name: "stats"
+    label: "Statistiken"
+    folder: "content/stats"
+    create: false
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Statistiken"
+        name: "stats"
+        widget: "list"
+        fields:
+          - { label: "Zahl", name: "number", widget: "number" }
+          - { label: "Text", name: "text", widget: "string" }
+
+  # Galerie
+  - name: "gallery"
+    label: "Galerie"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Beschreibung", name: "description", widget: "string" }
+      - { label: "Reihenfolge", name: "order", widget: "number", value_type: "int", min: 1 }
+
+  # Testimonials
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Info", name: "info", widget: "string" }
+      - { label: "Text", name: "text", widget: "text" }
+      - { label: "Reihenfolge", name: "order", widget: "number", value_type: "int", min: 1 }
+
+  # Kontaktdaten
+  - name: "contact"
+    label: "Kontaktdaten"
+    folder: "content/contact"
+    create: false
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Adresse", name: "address", widget: "markdown" }
+      - { label: "Öffnungszeiten", name: "opening_hours", widget: "markdown" }
+      - { label: "E-Mail", name: "email", widget: "string" }
+      - { label: "Telefon", name: "phone", widget: "string" }
+
+  # Social Media
+  - name: "social"
+    label: "Social Media"
+    folder: "content/social"
+    create: false
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Social Media Links"
+        name: "social_links"
+        widget: "list"
+        fields:
+          - { label: "Plattform", name: "platform", widget: "select", options: ["github", "instagram", "facebook", "twitter", "discord", "youtube"] }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "string", default: "fab fa-github", hint: "Font Awesome Icon-Klassenname" }
+
+  # Footer
+  - name: "footer"
+    label: "Footer"
+    folder: "content/footer"
+    create: false
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Copyright Text", name: "copyright", widget: "string" }
+      - { label: "Footer Text", name: "footer_text", widget: "text" }
+
+  # Seiten
+  - name: "pages"
+    label: "Seiten"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Beschreibung", name: "description", widget: "text", required: false }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+
+  # Global Site Settings
+  - name: "settings"
+    label: "Einstellungen"
+    files:
+      - label: "Allgemeine Einstellungen"
+        name: "general"
+        file: "content/settings/general.json"
+        fields:
+          - { label: "Website Titel", name: "site_title", widget: "string", default: "CyberScouts – be prepared" }
+          - { label: "Beschreibung", name: "site_description", widget: "text", default: "Die CyberScouts sind ein offener Maker Space für Kinder und Jugendliche zwischen 10 und 16 Jahren." }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Primärfarbe", name: "primary_color", widget: "color", default: "#0c7bff", allowInput: true }
+          - { label: "Sekundärfarbe", name: "secondary_color", widget: "color", default: "#6c63ff", allowInput: true }
+          - { label: "Akzentfarbe", name: "accent_color", widget: "color", default: "#ff5722", allowInput: true }

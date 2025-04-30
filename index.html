@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberScouts – be prepared</title>
+  
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+  
+  <!-- Font Awesome für Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Haupt-Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="assets/logo.svg" alt="CyberScouts Logo">
+      </a>
+      <div class="nav-links">
+        <a href="#about">Über uns</a>
+        <a href="#modules">Module</a>
+        <a href="#gallery">Eindrücke</a>
+        <a href="#contact" class="nav-cta">Mitmachen</a>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="animate-text">Cyber<span>Scouts</span></h1>
+        <p class="subtitle">be prepared for the digital future</p>
+        <div class="hero-cta">
+          <a href="#contact" class="cta-button">Jetzt mitmachen <i class="fas fa-arrow-right"></i></a>
+          <a href="#modules" class="secondary-button">Entdecke unsere Module <i class="fas fa-laptop-code"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-image.svg" alt="Kinder programmieren" id="hero-image">
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,149.3C672,160,768,160,864,138.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- About Section (gekürzt) -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Was sind die <span>CyberScouts</span>?</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Wir sind ein offener Maker Space für Kinder und Jugendliche zwischen 10 und 16 Jahren. Bei uns geht es um Technik, Kreativität und echtes Machen – von Elektronik über Programmieren bis hin zu Robotik und KI.</p>
+          <p>Bei den CyberScouts lernst du die Technologien der Zukunft kennen, experimentierst mit Hardware und Software und entwickelst deine eigenen Projekte – alles in einer gemeinschaftlichen und unterstützenden Umgebung.</p>
+        </div>
+        <div class="about-image">
+          <img src="assets/about-image.svg" alt="CyberScouts in Aktion" class="rounded-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weitere Sections gekürzt -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="assets/logo.svg" alt="CyberScouts Logo">
+        <p>CyberScouts.it – Technik erleben. Zukunft gestalten.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copyright">
+          &copy; 2025 CyberScouts. Alle Rechte vorbehalten.
+        </div>
+        <div class="admin-link">
+          <a href="/admin/" class="admin-button">Admin <i class="fas fa-lock"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js" defer></script>
+  
+  <!-- Netlify Identity Redirect Script -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

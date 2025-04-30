@@ -1,0 +1,15 @@
+[build]
+  publish = "."  # Das Root-Verzeichnis als Publish-Verzeichnis beibehalten
+
+# Redirects für den Admin-Bereich
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Headers für bessere Sicherheit, aber mit den notwendigen Ausnahmen für CMS
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Content-Security-Policy = "default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';"
+    X-Frame-Options = "SAMEORIGIN"

@@ -1,0 +1,281 @@
+/* ================ RESET & BASICS ================ */
+:root {
+  --primary: #0c7bff;
+  --primary-dark: #0062cc;
+  --secondary: #6c63ff;
+  --accent: #ff5722;
+  --dark: #333333;
+  --light: #f8f9fa;
+  --grey: #6c757d;
+  --success: #28a745;
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.section-header span {
+  color: var(--primary);
+}
+
+.divider {
+  height: 4px;
+  width: 70px;
+  background: var(--primary);
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--grey);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================ BUTTONS ================ */
+.cta-button, .secondary-button {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-size: 1rem;
+}
+
+.cta-button {
+  background: var(--primary);
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(12, 123, 255, 0.3);
+}
+
+.cta-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(12, 123, 255, 0.4);
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--dark) !important;
+  border: 2px solid var(--grey);
+}
+
+.secondary-button:hover {
+  border-color: var(--primary);
+  color: var(--primary) !important;
+  transform: translateY(-3px);
+}
+
+.cta-button i, .secondary-button i {
+  margin-left: 8px;
+}
+
+/* ================ NAVBAR ================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: var(--transition);
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  color: var(--dark);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-left: 30px;
+}
+
+.nav-cta:hover {
+  background: var(--primary-dark);
+}
+
+/* ================ HERO SECTION ================ */
+.hero {
+  position: relative;
+  padding: 180px 0 120px;
+  background: linear-gradient(135deg, #0c7bff 0%, #6c63ff 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Weitere CSS-Styles hier... */
+
+/* ================ RESPONSIVE DESIGN ================ */
+@media (max-width: 992px) {
+  .hero {
+    padding: 150px 0 100px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+}
