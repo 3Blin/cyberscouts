@@ -1,4 +1,6 @@
+```markdown
 ---
+title: Statistiken
 stats:
   - number: 120
     text: Teilnehmer
@@ -9,3 +11,4 @@ stats:
   - number: 7
     text: Mentoren
 ---
+```
