@@ -1,4 +1,5 @@
 ---
+title: Social Media
 social_links:
   - platform: github
     url: https://github.com/cyberscouts
