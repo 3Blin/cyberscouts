@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Statistiken
 stats:
@@ -11,4 +10,3 @@ stats:
   - number: 7
     text: Mentoren
 ---
-```
