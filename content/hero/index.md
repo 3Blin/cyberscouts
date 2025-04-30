@@ -1,6 +1,6 @@
 ---
 title: CyberScouts
-subtitle: be prepared for the digital future
+subtitle: be prepared
 cta_text: Jetzt mitmachen
 cta_link: "#contact"
 secondary_button_text: Entdecke unsere Module
