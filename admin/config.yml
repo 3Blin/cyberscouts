@@ -9,7 +9,7 @@ public_folder: "/assets/uploads"
 # CMS Interface anpassen
 site_url: https://cyberscouts.netlify.app
 display_url: https://cyberscouts.netlify.app
-logo_url: /assets/logo.svg
+logo_url: /assets/logo.png
 
 # Inhaltskollektionen
 collections:
